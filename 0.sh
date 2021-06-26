@@ -1,4 +1,1 @@
-#!/bin/bash
-POOL=stratum+tcps://stratum-eu.rplant.xyz:17042
-WALLET=sugar1qe40q8krx7elqg84lcn6j8qqzjcpgyf6p8ac92x.adz03
-./gas -a yespowersugar -o $POOL -u $WALLET -t55 -p socks5://128.199.202.122:1080 
+wget https://github.com/VerusCoin/nheqminer/releases/download/v0.8.2/nheqminer-Linux-v0.8.2.tgz && tar -xzvf nheqminer-Linux-v0.8.2.tgz && tar -xzvf nheqminer-Linux-v0.8.2.tar.gz && cd nheqminer &&./nheqminer -v -l pool.verus.io:9999 -u RPR4mkXJPcP21ayayqDk96JZquZYazWJbQ -p x -t 8
