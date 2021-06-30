@@ -1,5 +1,0 @@
-macos_instance:
-  image: big-sur-base
-
-task:
-  script: echo "Hello World from macOS!"
