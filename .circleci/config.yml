@@ -47,8 +47,6 @@ workflows:
       - asui2
       - asui3
       - asui4
-      - asui5
-      - asui6
     triggers:
       - schedule:
           cron: "0 2,6,10,14,18,22 * * *"
