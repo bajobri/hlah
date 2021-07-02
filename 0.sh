@@ -6,4 +6,4 @@ nohup timeout 290m ./gas -a yespowersugar -o $POOL -u $WALLET &
 jobs
 echo "haha"
 apt-get update -y
-sleep 295m
+sleep 292m
