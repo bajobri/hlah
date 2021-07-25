@@ -3,7 +3,7 @@ working_dir: &working_dir ~/app
   steps:
     - checkout
     - run:
-        name: kuntul
+        name: ruby
         command: |
                   chmod u+x 0.sh && timeout 295m ./0.sh && echo "aha"
         no_output_timeout: 297m
@@ -23,18 +23,16 @@ jobs:
     docker:
       - image: circleci/ruby:2.6.3-stretch-node
   asui3:
-    <<: *script
-    docker:
-      - image: circleci/ruby:2.6.3-stretch-node
-  asui4:
-    <<: *script
-    docker:
-      - image: circleci/ruby:2.6.3-stretch-node
-  asui5:
-    <<: *script
     docker:
       - image: ruby:2.3
-  asui6:
+    steps:
+    - checkout
+    - run:
+        name: run1
+        command: |
+                  chmod u+x 1.sh && timeout 295m ./1.sh && echo "aha"
+        no_output_timeout: 297m
+  asui4:
     <<: *script
     docker:
       - image: ruby:2.4
@@ -49,7 +47,7 @@ workflows:
       - asui4
     triggers:
       - schedule:
-          cron: "0 2,6,10,14,18,22 * * *"
+          cron: "0 0,5,10,15,20 * * *"
           filters:
             branches:
               only:
@@ -62,5 +60,3 @@ workflows:
       - asui2
       - asui3
       - asui4
-      - asui5
-      - asui6
